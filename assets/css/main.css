@@ -1,86 +1,342 @@
 * {
     padding: 0px;
     margin: 0px;
-    background: #202020;
-   }
+    background: #fffaf0;
+}
+
+@font-face {
+    font-family: OratorStd;
+    src:url(OratorStd.otf);
+}
 
 /* title css */
 
 .title {
-    color: white;
-    font-family:'Courier New', Courier, monospace;
+    color: #202020;
+    font-family: Courier;
+    font-style: normal;
     font-weight: normal;
-    text-align: center;
-    font-size: 1.8em;
+    line-height: 41px;
+    font-size: 2em;
     padding: 2.4rem;
-    padding-top: 8%;
+    padding-top: 3rem;
+    z-index: -1;
+    text-align: center;
 }
-
 
 /* actions buttons section */
 
 .filter {
-    justify-content: center;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    justify-content: space-between;
 
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-bottom: 10%;;
+    padding-right: 2.4rem;
+    padding-left: 2.4rem;
+    margin-bottom: 5%;
 }
 
 button {
     justify-content: center;
-    padding: .8rem;
-    margin: .8rem;;
+    padding: .5rem;
+    padding-right: .7rem;
+    padding-left: .7rem;
+    margin: 2rem;;
     background: 202020;
-    border:  1px solid white;
+    border:  1px solid #202020;
+    border-radius: 39px;
     cursor: pointer;
-    color: white;
-    font-family: 'Courier New', Courier, monospace;
+    color: #202020;
+    font-family: OratorStd;
     font-size: 16px;
 }
 
 /* animals info by threats */
+
 .animals {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    width: 100vw;
+    justify-content: space-around;
     align-items: center;
+    text-align: center;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    flex-wrap: inline-block;
+    display: inline-flex;
+
+    /* display: grid;
+    grid-template-columns: three;
+    grid-template-rows: auto;
+    justify-self: center; */
 }
 
 .animal-container {
-    width: 50vw;
-    height: 100%;
-    padding: 1 rem;
-    border:  2px solid white;
-    margin: 1%;
-    padding: 2%;
+    width: 25vw;
+    height: 19rem;;
+    padding: 1.5rem;
+    border:  2px solid #202020;
+    border-radius: 20px;
+    margin: 1.5%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
+
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    display: none;
+
+ }
+
+ .animal-container.active {
+    display: inline-flex;
  }
 
  .animal-image {
-    width: 30%;
-    padding: 5px;
+    width: 23rem;
+    height: 17rem;
+    padding: 1px;
+}
+
+.animal-image.off {
+    display: none;
+}
+
+.animal-name {
+    text-align: center;
+    padding-top: 2%;
+}
+
+.animal-name.off {
+    display: none;
 }
 
 h1 {
-    color: white;
-    font-family: Arial,Helvetica Neue,Helvetica,sans-serif; 
+    color: #202020;
+    font-family: Courier;
     font-weight: 300;
     padding: 5px;
+    font-size: 20px;
 }
 
 h3 {
-    color: white;
-    font-family: Arial,Helvetica Neue,Helvetica,sans-serif; 
+    color: #202020;
+    font-family: Courier;
     font-weight: 300;
     padding: 5px;
 }
 
 p {
-    color: white;
-    font-family:'Courier New', Courier, monospace;
+    color: #202020;
+    font-family: Courier;
     font-weight: normal; 
     padding: 5px;
 }
+
+.animal-population {
+    color: #202020;
+    font-family: OratorStd;
+    text-align: left;
+    display: none;
+}
+
+.animal-population.active {
+    display: block;
+}
+
+.animal-conservation-status {
+    color: #202020;
+    font-family: OratorStd;
+    text-align: left;
+    display: none;
+}
+
+.animal-conservation-status.active {
+    display: block;
+}
+
+.animal-threats {
+    color: #202020;
+    font-family: OratorStd;
+    text-align: left;
+    display: none;
+}
+
+.animal-threats.active {
+    display: block;
+}
+
+.animal-actions_needed {
+    color: #202020;
+    font-family: OratorStd; 
+    text-align: left;
+    display: none;
+}
+
+.animal-actions_needed.active {
+    display: block;
+}
+
+/* .animal-resource {
+    color: #202020;
+    font-family: OratorStd; 
+    text-align: left;
+    display: none;
+}
+
+.animal-resource.active {
+    display: block;
+} */
+
+/* yellows ingeneral */
+.js-public-transportation:hover {
+    border:  2px solid #eec92f;
+}
+.js-public-transportation:focus {
+    border:  2px solid #eec92f;
+}
+.js-old-tech:hover {
+    border:  2px solid #eec92f;
+}
+.js-old-tech:focus {
+    border:  2px solid #eec92f;
+}
+.js-petroleum-free:hover {
+    border:  2px solid #eec92f;
+}
+.js-petroleum-free:focus {
+    border:  2px solid #eec92f;
+}
+.js-less-meat:hover {
+    border:  2px solid #eec92f;
+}
+.js-less-meat:focus {
+    border:  2px solid #eec92f;
+}
+.js-composting:hover {
+    border:  2px solid #eec92f;
+}
+.js-composting:focus {
+    border:  2px solid #eec92f;
+}
+.js-using-fans:hover {
+    border:  2px solid #eec92f;
+}
+.js-using-fans:focus {
+    border:  2px solid #eec92f;
+}
+.js-reusable-bottle:hover {
+    border:  2px solid #eec92f;
+}
+.js-reusable-bottle:focus {
+    border:  2px solid #eec92f;
+}
+.js-turning-offlights:hover {
+    border:  2px solid #eec92f;
+}
+.js-turning-offlights:focus {
+    border:  2px solid #eec92f;
+}
+.js-reusable-bags:hover {
+    border:  2px solid #eec92f;
+}
+.js-reusable-bags:focus {
+    border:  2px solid #eec92f;
+}
+
+
+
+
+/* deforestation greens */
+.js-planting-trees:hover {
+    border:  2px solid #b5cc63;
+}
+.js-planting-trees:focus {
+    border:  2px solid #b5cc63;
+}
+.js-trimming-trees:hover {
+    border:  2px solid #b5cc63;
+}
+.js-trimming-trees:focus {
+    border:  2px solid #b5cc63;
+}
+.js-less-paper:hover {
+    border:  2px solid #b5cc63;
+}
+.js-less-paper:focus {
+    border:  2px solid #b5cc63;
+}
+.js-sustainable-wood:hover {
+    border:  2px solid #b5cc63;
+}
+.js-sustainable-wood:focus {
+    border:  2px solid #b5cc63;
+}
+.js-gardening:hover {
+    border:  2px solid #b5cc63;
+}
+.js-gardening:focus {
+    border:  2px solid #b5cc63;
+}
+.js-buying-locally:hover {
+    border:  2px solid #b5cc63;
+}
+.js-buying-locally:focus {
+    border:  2px solid #b5cc63;
+}
+.js-buying-organic:hover {
+    border:  2px solid #b5cc63;
+}
+.js-buying-organic:focus {
+    border:  2px solid #b5cc63;
+}
+.js-palm-oil:hover {
+    border:  2px solid #b5cc63;
+}
+.js-palm-oil:focus {
+    border:  2px solid #b5cc63;
+}
+
+/* water blues */
+
+.js-conserving-water:hover {
+    border:  2px solid #34b7c8;
+}
+.js-conserving-water:focus {
+    border:  2px solid #34b7c8;
+}
+.js-less-seafood:hover {
+    border:  2px solid #34b7c8;
+}
+.js-less-seafood:focus {
+    border:  2px solid #34b7c8;
+}
+.js-stop-eating-fish:hover {
+    border:  2px solid #34b7c8;
+}
+.js-stop-eating-fish:focus {
+    border:  2px solid #34b7c8;
+}
+
+/* reds  */
+.js-report-illegal:hover {
+    border:  2px solid #fc4f1e;
+}
+.js-report-illegal:focus {
+    border:  2px solid #fc4f1e;
+}
+.js-certified-products:hover {
+    border:  2px solid #fc4f1e;
+}
+.js-certified-products:focus {
+    border:  2px solid #fc4f1e;
+}
+.js-ivory:hover {
+    border:  2px solid #fc4f1e;
+}
+.js-ivory:focus {
+    border:  2px solid #fc4f1e;
+}
+
+
+

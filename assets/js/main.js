@@ -76,32 +76,43 @@ function showAnimals() {
      animalImage.src = animal.fields.image[0].url;
      animalContainer.append(animalImage);
 
-    // add titles to animalContainer
+    // add name to animalContainer
     var animalName = document.createElement("h1");
     animalName.classList.add("animal-name");
     animalName.innerText = animal.fields.name;
     animalContainer.append(animalName);
 
-    // add titles to animalContainer
+    // add fields/ titles to animalContainer
 
     var animalPopulation = document.createElement("p");
     animalPopulation.classList.add("animal-population");
-    animalPopulation.innerText = animal.fields.population;
+    animalPopulation.innerText = ("population: ")+animal.fields.population;
     animalContainer.append(animalPopulation);
+
+    var animalConservation_status = document.createElement("p");
+    animalConservation_status.classList.add("animal-conservation-status");
+    animalConservation_status.innerText = ("conservation status: ")+animal.fields.conservation_status;
+    animalContainer.append(animalConservation_status);
 
     var animalThreats = document.createElement("p");
     animalThreats.classList.add("animal-threats");
-    animalThreats.innerText = animal.fields.threats;
+    animalThreats.innerText = ("this animal is threatened by: ")+animal.fields.threats;
     animalContainer.append(animalThreats);
 
     var animalActions_needed = document.createElement("p");
     animalActions_needed.classList.add("animal-actions_needed");
-    animalActions_needed.innerText = animal.fields.actions_needed;
+    animalActions_needed.innerText = ("actions that are needed: ")+animal.fields.actions_needed;
     animalContainer.append(animalActions_needed);
+
+    // var animalResource = document.createElement("p");
+    // animalResource.classList.add("animal-resource");
+    // animalResource.innerHTML = ("learn more: ")+animal.fields.resource;
+    // animalContainer.append(animalResource);
+
 
     // get genre field from airtable
     // loop through the array and add each genre as a class
-    // a class to the song container
+    // a class to the animal container
 
     var animalActions = animal.fields.actions
     animalActions.forEach(function(actions) {
@@ -109,47 +120,287 @@ function showAnimals() {
     })
 
     // // filter by actions
-
-    // var actions = "animal-container";
-
-    // function actions (actions) {
-    // actions = actions
-      
-    // filterAnimals();
-    // }
-      
-    // function filterAnimals() {
-    // console.log("filter animals", actions);
-    // }
-       
-    // // hide all animals
-          
-    const animalContainers = document.querySelectorAll(".animal-container");
-    for (s of animalContainers) {
-    s.style.display = "none";
-    }
-
     // add event listener to our filter 
-    // filter by palmoil
+    // filter by palm-oil
 
     var filterPalmOil = document.querySelector(".js-palm-oil")
     filterPalmOil.addEventListener("click", function() {
       if (animalContainer.classList.contains("palm_oil")) {
-        animalContainer.style.opacity = "100%";
+        animalContainer.style.display = "inline-block";
       } else {
-        animalContainer.style.opacity = "0%";
+        animalContainer.style.display = "none";
       }
     })
-          
-    // //show animals if actions match
-    // const filteredContainers = document.querySelectorAll(
-    // "." + actions 
-    // );
-    // console.log(filteredContainers);
-    // for (s of filteredContainers) {
-    // s.style.display = "inline-block";
-    // }
+
+    // filter by old-tech
+
+    var filterOldTech = document.querySelector(".js-old-tech")
+    filterOldTech.addEventListener("click", function() {
+      if (animalContainer.classList.contains("old_tech")) {
+        animalContainer.style.display = "inline-block";
+      } else {
+        animalContainer.style.display = "none";
+      }
+      })
+        
+    // filter by public-transportation
+
+    var filterPublicTransportation = document.querySelector(".js-public-transportation")
+    filterPublicTransportation.addEventListener("click", function() {
+      if (animalContainer.classList.contains("public_transportation")) {
+        animalContainer.style.display = "inline-block";
+      } else {
+        animalContainer.style.display = "none";
+      }
+      })
+
+    // filter by buying-locally
+
+    var filterBuyingLocally = document.querySelector(".js-buying-locally")
+    filterBuyingLocally.addEventListener("click", function() {
+      if (animalContainer.classList.contains("buying_locally")) {
+        animalContainer.style.display = "inline-block";
+      } else {
+        animalContainer.style.display = "none";
+      }
+      })
+
+    // filter by reusable-bags
+
+    var filterReusableBags = document.querySelector(".js-reusable-bags")
+    filterReusableBags.addEventListener("click", function() {
+      if (animalContainer.classList.contains("reusable_bags")) {
+        animalContainer.style.display = "inline-block";
+      } else {
+        animalContainer.style.display = "none";
+      }
+      })
+
+    // filter by trimming-trees
+
+    var filterTrimmingTrees = document.querySelector(".js-trimming-trees")
+    filterTrimmingTrees.addEventListener("click", function() {
+      if (animalContainer.classList.contains("trimming_trees")) {
+        animalContainer.style.display = "inline-block";
+      } else {
+        animalContainer.style.display = "none";
+      }
+      })
+
+    // filter by petroleum-free
+
+    var filterPetroleumFree = document.querySelector(".js-petroleum-free")
+    filterPetroleumFree.addEventListener("click", function() {
+      if (animalContainer.classList.contains("petroleum_free")) {
+        animalContainer.style.display = "inline-block";
+      } else {
+        animalContainer.style.display = "none";
+      }
+      })
+
+    // filter by planting-trees
+
+    var filterPlantingTrees = document.querySelector(".js-planting-trees")
+    filterPlantingTrees.addEventListener("click", function() {
+      if (animalContainer.classList.contains("planting_trees")) {
+        animalContainer.style.display = "inline-block";
+      } else {
+        animalContainer.style.display = "none";
+      }
+      })
+
+    // filter by less-meat
+
+    var filterLessMeat = document.querySelector(".js-less-meat")
+    filterLessMeat.addEventListener("click", function() {
+      if (animalContainer.classList.contains("less_meat")) {
+        animalContainer.style.display = "inline-block";
+      } else {
+        animalContainer.style.display = "none";
+      }
+      })
+
+    // filter by composting
+
+    var filterComposting = document.querySelector(".js-composting")
+    filterComposting.addEventListener("click", function() {
+      if (animalContainer.classList.contains("composting")) {
+        animalContainer.style.display = "inline-block";
+      } else {
+        animalContainer.style.display = "none";
+      }
+      })
+
+    // filter by less-seafood
+
+    var filterLessSeafood = document.querySelector(".js-less-seafood")
+    filterLessSeafood.addEventListener("click", function() {
+      if (animalContainer.classList.contains("less_seafood")) {
+        animalContainer.style.display = "inline-block";
+      } else {
+        animalContainer.style.display = "none";
+      }
+      })
+
+    // filter by using-fans
+
+    var filterUsingFans = document.querySelector(".js-using-fans")
+    filterUsingFans.addEventListener("click", function() {
+      if (animalContainer.classList.contains("using_fans")) {
+        animalContainer.style.display = "inline-block";
+      } else {
+        animalContainer.style.display = "none";
+      }
+      })
+
+    // filter by sustainable-wood
+
+    var filterSustainableWood = document.querySelector(".js-sustainable-wood")
+    filterSustainableWood.addEventListener("click", function() {
+      if (animalContainer.classList.contains("sustainable_wood")) {
+        animalContainer.style.display = "inline-block";
+      } else {
+        animalContainer.style.display = "none";
+      }
+      })
+
+    // filter by buying-organic
+
+    var filterBuyingOrganic = document.querySelector(".js-buying-organic")
+    filterBuyingOrganic.addEventListener("click", function() {
+      if (animalContainer.classList.contains("buying_organic")) {
+        animalContainer.style.display = "inline-block";
+      } else {
+        animalContainer.style.display = "none";
+      }
+      })
+
+    // filter by less-paper
+
+    var filterLessPaper = document.querySelector(".js-less-paper")
+    filterLessPaper.addEventListener("click", function() {
+      if (animalContainer.classList.contains("less_paper")) {
+        animalContainer.style.display = "inline-block";
+      } else {
+        animalContainer.style.display = "none";
+      }
+      })
+
+    // filter by conserving-water
+
+    var filterConservingWater = document.querySelector(".js-conserving-water")
+    filterConservingWater.addEventListener("click", function() {
+      if (animalContainer.classList.contains("conserving_water")) {
+        animalContainer.style.display = "inline-block";
+      } else {
+        animalContainer.style.display = "none";
+      }
+      })
+
+    // filter by reusable-bottle
+
+    var filterReusableBottle = document.querySelector(".js-reusable-bottle")
+    filterReusableBottle.addEventListener("click", function() {
+      if (animalContainer.classList.contains("reusable_bottle")) {
+        animalContainer.style.display = "inline-block";
+      } else {
+        animalContainer.style.display = "none";
+      }
+      })
+
+    // filter by gardening
+
+    var filterGardening = document.querySelector(".js-gardening")
+    filterGardening.addEventListener("click", function() {
+      if (animalContainer.classList.contains("gardening")) {
+        animalContainer.style.display = "inline-block";
+      } else {
+        animalContainer.style.display = "none";
+      }
+      })
+
+    // filter by turning-offlights
+
+    var filterTurningOfflights = document.querySelector(".js-turning-offlights")
+    filterTurningOfflights.addEventListener("click", function() {
+      if (animalContainer.classList.contains("turning_offlights")) {
+        animalContainer.style.display = "inline-block";
+      } else {
+        animalContainer.style.display = "none";
+      }
+      })
+
+    // filter by ivory
+
+    var filterIvory = document.querySelector(".js-ivory")
+    filterIvory.addEventListener("click", function() {
+      if (animalContainer.classList.contains("ivory")) {
+        animalContainer.style.display = "inline-block";
+      } else {
+        animalContainer.style.display = "none";
+      }
+      })
+
+    // filter by stop-eating-fish
+
+    var filterStopEatingfish = document.querySelector(".js-stop-eating-fish")
+    filterStopEatingfish.addEventListener("click", function() {
+      if (animalContainer.classList.contains("stop_eating_fish")) {
+        animalContainer.style.display = "inline-block";
+      } else {
+        animalContainer.style.display = "none";
+      }
+      })
+
+    // filter by certified-products
+
+    var filterCertifiedProducts = document.querySelector(".js-certified-products")
+    filterCertifiedProducts.addEventListener("click", function() {
+      if (animalContainer.classList.contains("certified_products")) {
+        animalContainer.style.display = "inline-block";
+      } else {
+        animalContainer.style.display = "none";
+      }
+      })
+
+      // filter by report-illegal
+
+      var filterReportIllegal = document.querySelector(".js-report-illegal")
+      filterReportIllegal.addEventListener("click", function() {
+        if (animalContainer.classList.contains("report_illegal")) {
+          animalContainer.style.display = "inline-block";
+        } else {
+          animalContainer.style.display = "none";
+        }
+        }) 
+
+      // click animal container for more info
+
+      animalContainer.addEventListener("click", function() {
+      animalPopulation.classList.toggle("active");
+      })
+
+      animalContainer.addEventListener("click", function() {
+      animalConservation_status.classList.toggle("active");
+      })
+
+      animalContainer.addEventListener("click", function() {
+      animalThreats.classList.toggle("active");
+      })
     
+      animalContainer.addEventListener("click", function() {
+      animalActions_needed.classList.toggle("active");
+      })
+
+      // animalContainer.addEventListener("click", function() {
+      // animalResource.classList.toggle("active");
+      // })
+      
+      animalContainer.addEventListener("click", function() {
+      animalImage.classList.toggle("off");
+      animalName.classList.toggle("off");
+      })
+
     });
 }
 
